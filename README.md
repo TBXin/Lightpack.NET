@@ -1,4 +1,4 @@
 Lightpack.NET
 =============
 
-Lightpack .NET API
+Lightpack .NET API для http://code.google.com/p/lightpack/
