@@ -1,4 +1,4 @@
-Lightpack.NET
+ÔªøLightpack.NET
 =============
 
-Lightpack .NET API ‰Îˇ http://code.google.com/p/lightpack/
+Lightpack .NET API –¥–ª—è http://code.google.com/p/lightpack/
