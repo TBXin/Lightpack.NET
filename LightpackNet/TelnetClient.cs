@@ -20,8 +20,8 @@ namespace LightpackNet
                 if (socket == null)
                     return false;
 
-                var canRead = socket.Poll(1000, SelectMode.SelectWrite);
-                return canRead;
+                var canWrite = socket.Poll(1000, SelectMode.SelectWrite);
+                return canWrite;
             }
         }
 
@@ -46,7 +46,7 @@ namespace LightpackNet
         public void Disconnect()
         {
             if (!IsConnected)
-                return;
+                throw new InvalidOperationException("Not connected");
 
             try
             {

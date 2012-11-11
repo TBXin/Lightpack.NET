@@ -52,7 +52,7 @@ namespace LightpackNet
         }
 
         /// <summary>
-        /// Отправить команду.
+        /// Отправляет команду.
         /// </summary>
         /// <param name="command">Текст команды.</param>
         /// <returns></returns>
@@ -68,7 +68,7 @@ namespace LightpackNet
         }
 
         /// <summary>
-        /// Ввод ключа авторизации (API ключ) для взаимодействия с устройством.
+        /// Производит авторизацию при помощи API ключа.
         /// </summary>
         /// <param name="key">Ключ</param>
         /// <returns></returns>
@@ -165,7 +165,7 @@ namespace LightpackNet
         /// <summary>
         /// Устанавливает цвет светодиода. Требует эсклюзивный режим захвата устройства.
         /// </summary>
-        /// <param name="number">Номер светодиода</param>
+        /// <param name="number">Номер светодиода. Нумерация начинается с 0.</param>
         /// <param name="color">Цвет</param>
         /// <returns></returns>
         public CommonAnswer SetColor(byte number, Color color)
@@ -176,7 +176,7 @@ namespace LightpackNet
         /// <summary>
         /// Устанавливает цвет светодиода. Требует эсклюзивный режим захвата устройства.
         /// </summary>
-        /// <param name="led">Агрегация светодиода</param>
+        /// <param name="led">Светодиод</param>
         /// <returns></returns>
         public CommonAnswer SetColor(Led led)
         {
@@ -319,7 +319,7 @@ namespace LightpackNet
             if (answer.Equals(LightpackAnswers.NotLocked, StringComparison.OrdinalIgnoreCase))
                 return LockAnswer.NotLocked;
 
-            throw new InvalidOperationException(String.Format("Unknown lock result '{0}'", answer));
+            throw new InvalidOperationException(String.Format("Unknown lock / unlock result '{0}'", answer));
         }
 
         private StatusAnswer GetStatusAnswer(string answer)
@@ -351,7 +351,7 @@ namespace LightpackNet
             var parts = answer.Split(new[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (parts.Length != 2)
-                throw new InvalidOperationException(String.Format("Unknown status answer: '{0}'", answer));
+                throw new InvalidOperationException(String.Format("Unknown status api answer: '{0}'", answer));
 
             answer = parts[1].TrimEnd('\r', '\n');
 

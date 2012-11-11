@@ -8,7 +8,7 @@ namespace LightpackNet
     public class Led
     {
         /// <summary>
-        /// Номер.
+        /// Номер. Нумерация начинается с 0.
         /// </summary>
         public byte Number { get; set; }
 
