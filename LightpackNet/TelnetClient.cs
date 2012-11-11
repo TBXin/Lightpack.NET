@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
-namespace LightpackNetApi
+namespace LightpackNet
 {
     class TelnetClient
     {

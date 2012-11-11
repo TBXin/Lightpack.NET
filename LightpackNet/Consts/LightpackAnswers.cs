@@ -1,5 +1,8 @@
-﻿namespace LightpackNetApi.Consts
+﻿namespace LightpackNet.Consts
 {
+    /// <summary>
+    /// Константы ответов API.
+    /// </summary>
     static class LightpackAnswers
     {
         public const string Ok = "ok";

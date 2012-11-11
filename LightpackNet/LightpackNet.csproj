@@ -7,8 +7,8 @@
     <ProjectGuid>{22B691B8-FA5F-4AD6-BAB9-3ABF10986BCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LightpackNetApi</RootNamespace>
-    <AssemblyName>LightpackNetApi</AssemblyName>
+    <RootNamespace>LightpackNet</RootNamespace>
+    <AssemblyName>LightpackNet</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

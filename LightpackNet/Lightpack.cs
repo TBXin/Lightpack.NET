@@ -4,10 +4,10 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using LightpackNetApi.Answers;
-using LightpackNetApi.Consts;
+using LightpackNet.Answers;
+using LightpackNet.Consts;
 
-namespace LightpackNetApi
+namespace LightpackNet
 {
     /// <summary>
     /// Lightpack API v1.3
@@ -18,6 +18,13 @@ namespace LightpackNetApi
         private readonly byte[] ledMap;
         private readonly string apiKey;
 
+        /// <summary>
+        /// Инициализация Lightpack API.
+        /// </summary>
+        /// <param name="host">Адрес компьютера, на котором запущен управляющий софт Lightpack'a</param>
+        /// <param name="port">Порт TCP-порта, который слушает сервер (по умолчанию 3636)</param>
+        /// <param name="ledMap">Массив для ремаппинга вашей светодиодной конфигурации</param>
+        /// <param name="apiKey">Ключ API</param>
         public Lightpack(string host, int port, byte[] ledMap, string apiKey = null)
         {
             client = new TelnetClient(host, port);
@@ -25,6 +32,9 @@ namespace LightpackNetApi
             this.apiKey = apiKey;
         }
 
+        /// <summary>
+        /// Подключиться к управляющему серверу Lightpack'а.
+        /// </summary>
         public void Connect()
         {
             client.Connect();
@@ -33,18 +43,26 @@ namespace LightpackNetApi
                 ApiKey(apiKey);
         }
 
+        /// <summary>
+        /// Отключиться от управляющего сервера.
+        /// </summary>
         public void Disconnect()
         {
             client.Disconnect();
         }
 
+        /// <summary>
+        /// Отправить команду.
+        /// </summary>
+        /// <param name="command">Текст команды.</param>
+        /// <returns></returns>
         public string Send(string command)
         {
             client.Write(command);
             var result = client.Read();
 
             if (result.ToLower().StartsWith("authorization required"))
-                throw new InvalidOperationException("Authorization required");
+                throw new InvalidOperationException("Authorization required / Invalid api key");
 
             return result;
         }

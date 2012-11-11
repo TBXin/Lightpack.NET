@@ -1,4 +1,4 @@
-﻿namespace LightpackNetApi.Answers
+﻿namespace LightpackNet.Answers
 {
     public enum LockAnswer
     {

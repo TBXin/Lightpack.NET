@@ -75,9 +75,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LightpackNetApi\LightpackNetApi.csproj">
+    <ProjectReference Include="..\LightpackNet\LightpackNet.csproj">
       <Project>{22b691b8-fa5f-4ad6-bab9-3abf10986bcf}</Project>
-      <Name>LightpackNetApi</Name>
+      <Name>LightpackNet</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

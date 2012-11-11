@@ -1,5 +1,8 @@
-﻿namespace LightpackNetApi.Consts
+﻿namespace LightpackNet.Consts
 {
+    /// <summary>
+    /// Константы команд API.
+    /// </summary>
     static class LightpackCommands
     {
         // Common commands

@@ -4,8 +4,8 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Forms;
-using LightpackNetApi;
-using LightpackNetApi.Answers;
+using LightpackNet;
+using LightpackNet.Answers;
 
 namespace LightpackApiTest
 {

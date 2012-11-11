@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightpackNetApi", "LightpackNetApi\LightpackNetApi.csproj", "{22B691B8-FA5F-4AD6-BAB9-3ABF10986BCF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightpackNet", "LightpackNet\LightpackNet.csproj", "{22B691B8-FA5F-4AD6-BAB9-3ABF10986BCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightpackApiTest", "LightpackApiTest\LightpackApiTest.csproj", "{4E18CEE8-7DE1-48AE-A809-F50DE54C76F1}"
 EndProject
